@@ -28,7 +28,7 @@ public abstract class MvvmActivity<V extends ViewDataBinding, VM extends IMvvmBa
     protected VM viewModel;
     // loadSir 一个用来处理页面View替换的三方库
     private LoadService mLoadService;
-    private V viewDataBinding;
+    protected V viewDataBinding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
