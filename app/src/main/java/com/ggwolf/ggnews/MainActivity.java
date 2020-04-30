@@ -1,20 +1,40 @@
 package com.ggwolf.ggnews;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 
+import com.ggwolf.base.activity.MvvmActivity;
+import com.ggwolf.base.viewmodel.MvvmBaseViewModel;
 import com.ggwolf.ggnews.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * MainActivity没有数据要绑定，所有它的ViewModel为空即可，然后让子Fragment去处理就可以了
+ */
 
-    private ActivityMainBinding mainBinding;
+public class MainActivity extends MvvmActivity<ActivityMainBinding, MvvmBaseViewModel> {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        mainBinding.executePendingBindings();
+    }
+
+    @Override
+    protected void onRetryBtnClick() {
+
+    }
+
+    @Override
+    protected MvvmBaseViewModel getViewModel() {
+        return null;
+    }
+
+    @Override
+    public int getBindingVariable() {
+        return 0;
+    }
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_main;
     }
 }
