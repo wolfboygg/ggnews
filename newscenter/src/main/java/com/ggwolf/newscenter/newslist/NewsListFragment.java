@@ -17,7 +17,7 @@ import com.ggwolf.newscenter.R;
 /**
  * 新闻列表的Fragment
  */
-public class NewsListFragment extends MvvmFragment<NewsFragmentBinding, New> {
+public class NewsListFragment extends MvvmFragment {
 
 
     @Override

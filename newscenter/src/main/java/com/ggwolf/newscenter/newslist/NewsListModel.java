@@ -19,7 +19,7 @@ public class NewsListModel<T> extends BasePaingModel<T> {
 
     @Override
     protected Type getTClass() {
-        return new TypeToken<ArrayList<>>
+        return null;
     }
 
     public NewsListModel(String mChannelId, String mChannelName) {

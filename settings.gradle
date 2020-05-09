@@ -1,2 +1,2 @@
-include ':app', ':base', ':newscenter', ':common'
+include ':app', ':base', ':newscenter', ':common', ':network_api'
 rootProject.name='ggnews'
